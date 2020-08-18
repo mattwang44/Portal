@@ -1,45 +1,110 @@
 {
-  "event_id": "",
+  "event_id": "testId",
   "display_name": {
-    "en": "",
-    "zh": "",
+    "en": "testName",
+    "zh": "testName",
     "<Any ISO 639-1 lang>": ""
   },
   "logo_url": "https://", // only accept HTTPS URL
   "event_date": { // only accept ISO 8601
-    "start": "2020-03-28T00:00:00+08:00",
-    "end": "2020-03-28T00:00:00+08:00"
+    "start": "2000-03-28T00:00:00+08:00",
+    "end": "2030-03-28T00:00:00+08:00"
   }
   "publish": { // only accept ISO 8601
-    "start": "2020-02-23T00:00:00+08:00",
-    "end": "2020-08-31T00:00:00+08:00"
+    "start": "2000-02-23T00:00:00+08:00",
+    "end": "2030-08-31T00:00:00+08:00"
   },
-  "features": [ // app follow the sequence
+  "features": [
     {
-      "feature": "", // fastpass, schedule, announcement, puzzle, ticket, telegram, im, sponsors, staffs, venue, webview, wifi
-      "icon": "https://" // require when feature is webview, only accept @3x.png max: 128x128
+      "feature": "fastpass",
       "display_text": {
-        "en": "",
-        "zh": "",
-        "<Any ISO 639-1 lang>": ""
+        "en": "Fast Pass",
+        "zh": "快速通關"
       },
-      "url": "https://",
-      /*
-       * only accept HTTPS URL, support placeholder {role}, {public_token}
-       * require when feature is fastpass, announcement or ticket, the url is server base url, https://<domain>
-       */
-      "wifi": [ // require when feature is wifi
-        {
-          "SSID": "SITCON 2020",
-          "password": ""
-        },
-        ...
-      ]
-      "visible_roles": [ // option, default for all user, string need match server config
-        "staff",
-        "speaker"
+      "url": "https://pycon.opass.app"
+    },
+    {
+      "feature": "schedule",
+      "display_text": {
+        "en": "Schedule",
+        "zh": "議程"
+      },
+      "url": "https://tw.pycon.org/2019/ccip/"
+    },
+    {
+      "feature": "announcement",
+      "display_text": {
+        "en": "Announcement",
+        "zh": "大會公告"
+      },
+      "url": "https://pycon.opass.app"
+    },
+    {
+      "feature": "im",
+      "display_text": {
+        "en": "IRC",
+        "zh": "IRC"
+      },
+      "url": "",
+      "visible_roles": [
+        "staff"
       ]
     },
-    ...
+    {
+      "feature": "puzzle",
+      "display_text": {
+        "en": "Booth Reward Activity",
+        "zh": "大地遊戲"
+      },
+      "url": "https://game.pycon.tw/?mode=app&token="
+    },
+    {
+      "feature": "ticket",
+      "display_text": {
+        "en": "Ticket",
+        "zh": "我的票券"
+      }
+    },
+    {
+      "feature": "webview",
+      "display_text": {
+        "en": "Guidebook",
+        "zh": "大會手冊"
+      },
+      "icon": "https://github.com/pycontw/ccip-files/blob/master/baseline_book_black.png?raw=true",
+      "url": "https://e.issuu.com/embed.html?d=pycontw19_book_v4&u=tai271828"
+    },
+    {
+      "feature": "telegram",
+      "display_text": {
+        "en": "Telegram",
+        "zh": "Telegram"
+      },
+      "url": "https://t.me/pycontw2018"
+    },
+    {
+      "feature": "sponsors",
+      "display_text": {
+        "en": "Sponsors",
+        "zh": "贊助"
+      },
+      "url": "https://tw.pycon.org/2019/ccip/sponsors/"
+    },
+    {
+      "feature": "venue",
+      "display_text": {
+        "en": "Venue",
+        "zh": "會場地圖"
+      },
+      "url": "https://tw.pycon.org/2019/static/pycontw-2019/assets/venue-map.svg"
+    },
+    {
+      "feature": "staffs",
+      "display_text": {
+        "en": "Staffs",
+        "zh": "工作人員"
+      },
+      "url": "https://tw.pycon.org/2019/ccip/staff/"
+    }
   ]
 }
